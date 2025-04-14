@@ -12,12 +12,15 @@ int main() {
     int Turismo1;            // Turísmo sem o ´ para evitar algum tipo de erro de leitura
     float Area1;             // Área sem o ´para evitar akgum tipo de erro de leitura
     float PIB1;
+    float Densidade1;
+    float PIBPERCAPITA1;
 
     // Segunda Carta
 
     char Estado2[3], Codigo2[10], Cidade2[30];
     int Populaçao2, Turismo2;
     float Area2, PIB2;
+    float Densidade2, PIBPERCAPITA2;
 
     // Primeira Carta
 
@@ -44,17 +47,21 @@ int main() {
 
       // Saída de dados
 
-      printf("Carta 01: \n");
+      printf(" *** Carta 01: ***\n");
       printf("Estado: %s\n", Estado1);
       printf("Código: %9s\n", Codigo1);
       printf("Nome da Cidade: %s\n", Cidade1);
       printf("População: %d\n", Populaçao1);
       printf("Área: %.2f km²\n", Area1);
-      printf("PIB: %2f Bilhões de reais\n", PIB1);
+      printf("PIB: %.2f Bilhões de reais\n", PIB1);
       printf("Número de Pontos Turísticos %d\n", Turismo1);
+      Densidade1 = (Populaçao1 + Area1) / 2;
+      printf("Densidade Populacional: %.2f hab/km²\n", Densidade1);
+      PIBPERCAPITA1 = (PIB1 + Populaçao1) / 2;
+      printf("PIB PER CAPITA: %.2f Reais\n", PIBPERCAPITA1);
   
       // Segunda Carta
-
+    
     printf("Digite o Estado: \n");
     scanf("%2s", Estado2);  // %2s para garantir que leia apenas 2 caracteres
 
@@ -78,14 +85,19 @@ int main() {
 
       // Saída de dados
 
+      printf(" *** Carta 02: ***\n");
       printf("Carta 02: \n");
       printf("Estado: %s\n", Estado2);
       printf("Código: %9s\n", Codigo2);
       printf("Nome da Cidade: %s\n", Cidade2);
       printf("População: %d\n", Populaçao2);
       printf("Área: %.2f km²\n", Area2);
-      printf("PIB: %2f Bilhões de reais\n", PIB2);
+      printf("PIB: %.2f Bilhões de reais\n", PIB2);
       printf("Número de Pontos Turísticos %d\n", Turismo2);
+      Densidade2 = (Populaçao2 + Area2) / 2;
+      printf("Densidade Populacional: %.2f hab/km²\n", Densidade2);
+      PIBPERCAPITA2 = (PIB2 + Populaçao2) / 2;
+      printf("PIB PER CAPITA: %.2f Reais\n", PIBPERCAPITA2);
 
     return 0;
 }
